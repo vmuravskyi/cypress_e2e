@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+const { equal } = require("assert")
+
 // context
 
 describe('First test suite', () => {
@@ -43,7 +45,7 @@ describe('First test suite', () => {
     // get() - find webelement on the page globally by locator
     // find() - find child elements by locator
     // contains() - find element by HTML text and by text and locator, finds the first matching element
-    it.only('second test', () => {
+    it('second test', () => {
         cy.visit('/')
         const forms = cy.contains('.menu-title', 'Forms').should('be.visible').click()
         const formLayout = cy.contains('.menu-title', 'Form Layouts').should('be.visible').click()
