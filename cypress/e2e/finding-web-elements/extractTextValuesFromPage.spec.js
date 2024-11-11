@@ -3,7 +3,7 @@ const { equal } = require("assert")
 
 describe('test', () => {
 
-    it.only('extracat text values from page', () => {
+    it.only('extract text values from page', () => {
 
         cy.visit('/')
         cy.contains('.menu-title', 'Forms').click()
