@@ -33,7 +33,7 @@ describe('test', () => {
 
         cy.contains('nb-card', 'Common Datepicker').find('input').then(input => {
             cy.wrap(input).click()
-            let dateToAssert = selectDayFromCurrent(50)
+            let dateToAssert = selectDayFromCurrent(2000)
             cy.wrap(input).invoke('prop', 'value').should('equal', dateToAssert)
             cy.wrap(input).should('have.value', dateToAssert)
         })
