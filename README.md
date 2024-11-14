@@ -4,6 +4,7 @@ This is modified and more lightweight version of original application to practic
 
 The original repo is here: https://github.com/akveo/ngx-admin
 
+// Cypress docs - https://docs.cypress.io/app/core-concepts/introduction-to-cypress
 
 install app
 npm install --force
