@@ -36,6 +36,22 @@ describe('test', () => {
         })
 
 
+        // 3. get each row validation
+        const age = [20, 30, 40, 200]
+
+        cy.wrap(age).each(value => {
+            cy.get('thead [placeholder="Age"]').clear().type(value)
+            cy.wait(500)
+            cy.get('tbody tr').each(row => {
+                if (value == 200) {
+                    cy.wrap(row).should('contain', "No data found")
+                } else {
+                    cy.wrap(row).find('td').eq(6).should('contain', value)
+                }
+            })
+        })
+
+
     })
 
 })
